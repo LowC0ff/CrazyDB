@@ -35,4 +35,11 @@ int insere_linha(char *file, void *line, int size){
     close(table_fd);
 
     //RETURN STATUS OF WRITE
+    return num_bytes;
+
+    //MAIN
+    int main(){
+        struct s_generic gen = { 0x20,0x30,0x40,0x50,0x60,0x70,0x80,0x90};
+        insert_line("table_generic", &gen, t_generic);
+    };
 };
