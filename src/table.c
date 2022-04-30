@@ -24,7 +24,7 @@ struct s_generic {
 const unsigned char t_generic = sizeof(struct s_generic);
 
 //INSERT LINE
-int insere_linha(char *file, void *line, int size){
+int insert_line(char *file, void *line, int size){
     //OPEN FILE
     int table_fd = open(file, O_APPEND|O_CREAT|O_WRONLY, S_IRUSR|S_IWUSR);
 
@@ -36,10 +36,11 @@ int insere_linha(char *file, void *line, int size){
 
     //RETURN STATUS OF WRITE
     return num_bytes;
+};
 
     //MAIN
     int main(){
         struct s_generic gen = { 0x20,0x30,0x40,0x50,0x60,0x70,0x80,0x90};
         insert_line("table_generic", &gen, t_generic);
+        return 0;
     };
-};
