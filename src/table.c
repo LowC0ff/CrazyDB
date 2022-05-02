@@ -33,6 +33,8 @@ struct s_generic {
 };
 
 //STRUCTURE SIZES
+const unsigned char t_line    = sizeof(struct s_line);
+const unsigned char t_table   = sizeof(struct s_table);
 const unsigned char t_generic = sizeof(struct s_generic);
 
 //INSERT LINE
@@ -49,6 +51,9 @@ int insert_line(char *file, void *line, int size){
     //RETURN STATUS OF WRITE
     return num_bytes;
 };
+
+//OPEN TABLE
+
 
     //MAIN
     int main(){
