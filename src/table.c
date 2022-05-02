@@ -53,7 +53,14 @@ int insert_line(char *file, void *line, int size){
 };
 
 //OPEN TABLE
+struct s_table *
+open_table(char *file){
+    //pointer s_table
+    struct s_table * table;
 
+    //ALLOCATE MEMORY TO s_table STRUCTERE
+    table = calloc(t_table, 1);
+};
 
     //MAIN
     int main(){
