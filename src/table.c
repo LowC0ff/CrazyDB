@@ -13,6 +13,18 @@
 #include <sys/stat.h>
 
 //STRUCTURE
+struct s_table {
+    void *data, *finally;
+    int size;
+    int num_line;
+    bool erro;
+};
+
+struct s_line {
+    void *data;
+    int size;
+};
+
 struct s_generic {
     int i1, i2;
     float f1, f2;
