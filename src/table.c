@@ -60,6 +60,15 @@ open_table(char *file){
 
     //ALLOCATE MEMORY TO s_table STRUCTERE
     table = calloc(t_table, 1);
+    table->data = NULL;
+
+    //OPEN FILE OF TABLE
+    int table_fd = open(file, O_RDONLY);
+
+    //HANDLE INFORMATION ABOUT FILE
+    struct stat table_info;
+    fstat(table_fd, &table_info);
+
 };
 
     //MAIN
