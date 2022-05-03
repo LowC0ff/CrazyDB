@@ -69,6 +69,11 @@ open_table(char *file){
     struct stat table_info;
     fstat(table_fd, &table_info);
 
+    //ALLOCATE SPACE FOR INTEGER TABLE ALL
+    table->size = (int) table_info.st_size;
+    table->data = calloc(table->size, 1);
+    table->finally = table->data + table->size;
+
 };
 
     //MAIN
