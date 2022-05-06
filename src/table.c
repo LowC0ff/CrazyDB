@@ -45,7 +45,7 @@ int insert_line(char *file, void *line, int size){
     //WRITE LINE
     ssize_t num_bytes = write(table_fd, line, size);
 
-    //CLOSED FILE
+    //CLOSE FILE
     close(table_fd);
 
     //RETURN STATUS OF WRITE
@@ -81,6 +81,12 @@ open_table(char *file){
     if(num_bytes <= 8){
         table->erro = true;
     }
+
+    //CLOSE FILE OF TABLE
+    close(table_fd);
+
+    //RETURN STRUCT THE TABLE
+    return table;
 
 };
 
