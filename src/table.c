@@ -77,6 +77,11 @@ open_table(char *file){
     //LOAD TABLE IN ALLOCATED SPACE
     ssize_t num_bytes = read(table_fd, table->data, table->size);
 
+    //IF NUM_BYTES <= 8 -> ERRO!!
+    if(num_bytes <= 8){
+        table->erro = true;
+    }
+
 };
 
     //MAIN
