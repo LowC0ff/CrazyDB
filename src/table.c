@@ -75,7 +75,7 @@ open_table(char *file){
     table->finally = table->data + table->size;
 
     //LOAD TABLE IN ALLOCATED SPACE
-    ssize_t num_bytes = read(table_fd, table->size);
+    ssize_t num_bytes = read(table_fd, table->data, table->size);
 
 };
 
