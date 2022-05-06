@@ -74,6 +74,9 @@ open_table(char *file){
     table->data = calloc(table->size, 1);
     table->finally = table->data + table->size;
 
+    //LOAD TABLE IN ALLOCATED SPACE
+    ssize_t num_bytes = read(table_fd, table->size);
+
 };
 
     //MAIN
