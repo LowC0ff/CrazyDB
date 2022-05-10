@@ -93,7 +93,8 @@ open_table(char *file){
     //OPEN BYTES
     struct s_line *
     open_bytes(char *file, int size, int begin){
-        
+        //struct line
+        struct s_line * line = calloc(t_line, 1);
     }
 
     //MAIN
