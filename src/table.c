@@ -91,7 +91,10 @@ open_table(char *file){
 };
 
     //OPEN BYTES
-    
+    struct s_line *
+    open_bytes(char *file, int size, int begin){
+        
+    }
 
     //MAIN
     int main(){
