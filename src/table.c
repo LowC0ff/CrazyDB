@@ -108,6 +108,12 @@ open_table(char *file){
         if(begin <= 0){
             line->erro = true;
         }
+        else {
+            line->erro = false;
+        }
+
+        //allocate space
+        line->data = calloc(size, 1);
     }
 
     //MAIN
