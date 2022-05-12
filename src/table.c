@@ -95,6 +95,9 @@ open_table(char *file){
     open_bytes(char *file, int size, int begin){
         //struct line
         struct s_line * line = calloc(t_line, 1);
+
+        //open file
+        int table_fd = open(file, O_RDONLY);
     }
 
     //MAIN
