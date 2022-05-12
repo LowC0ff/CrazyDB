@@ -23,6 +23,8 @@ struct s_table {
 struct s_line {
     void *data;
     int size;
+    int num_line;
+    bool erro;
 };
 
 struct s_generic {
@@ -98,6 +100,14 @@ open_table(char *file){
 
         //open file
         int table_fd = open(file, O_RDONLY);
+
+        //fetch file
+        begin = lseek(table_fd, (off_t) begin, SEEK_SET);
+
+        //error
+        if(begin <= 0){
+            line->erro = true;
+        }
     }
 
     //MAIN
