@@ -114,6 +114,8 @@ open_table(char *file){
 
         //allocate space
         line->data = calloc(size, 1);
+
+        //load byte
     }
 
     //MAIN
