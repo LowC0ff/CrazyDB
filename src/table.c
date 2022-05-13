@@ -116,6 +116,8 @@ open_table(char *file){
         line->data = calloc(size, 1);
 
         //load byte
+        ssize_t num_bytes = read(table_fd, line->data, (size_t) size);
+
     }
 
     //MAIN
