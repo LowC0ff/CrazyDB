@@ -122,6 +122,14 @@ open_table(char *file){
         if(num_bytes <= 0){
             line->erro = true;
         }
+        else {
+            line->erro = false;
+        }
+
+        //
+        close(table_fd);
+
+        return line;
 
     }
 
