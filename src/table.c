@@ -118,6 +118,11 @@ open_table(char *file){
         //load byte
         ssize_t num_bytes = read(table_fd, line->data, (size_t) size);
 
+        //error
+        if(num_bytes <= 0){
+            line->erro = true;
+        }
+
     }
 
     //MAIN
