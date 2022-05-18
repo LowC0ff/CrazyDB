@@ -133,6 +133,8 @@ open_table(char *file){
 
     }
 
+    //open line
+
     //MAIN
     int main(){
         struct s_generic gen = { 0x20,0x30,0x40,0x50,0x60,0x70,0x80,0x90};
