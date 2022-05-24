@@ -134,6 +134,7 @@ open_table(char *file){
     }
 
     //open line
+    
 
     //MAIN
     int main(){
