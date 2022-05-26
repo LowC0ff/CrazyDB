@@ -134,7 +134,11 @@ open_table(char *file){
     }
 
     //open line
-    
+    struct s_line
+    open_line(char *file, int size_line, int position){
+        int begin = size_line * position;
+        return open_bytes[file, size_line, begin];
+    }
 
     //MAIN
     int main(){
